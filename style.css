@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+/* REM = Root EM 
+1 rem = a uma unidade de medida padrão das fontes do navqagador do usuário.
+*/
 :root {
   font-size: 62,5% /* 10px */
 }
@@ -11,6 +14,12 @@
 body {
   background: #ECE9FD;
   padding: 6.0rem 2.3rem 6.6rem;
+  font-family: 'Epilogue', sans-serif;
+}
+
+main {
+  max-width: 33rem;
+  margin: 0 auto;
 }
 
 ul {
@@ -18,16 +27,65 @@ ul {
 }
 
 h1 {
-  font-family: 'Epilogue', sans-serif;
   font-size: 4.0rem;
+  font-weight: 800;
   line-height: 4.8rem;
+  color: #090039;
+  margim-bottom: 1.5rem;
 }
 
-/* REM = Root EM 
-1 rem = a uma unidade de medida padrão das fontes do navqagador do usuário.
-*/
+h1 + p {
+  color: rgba(10, 0, 57, 0.64);
+  line-height: 3.2rem;
+  margin-bottom: 3.2rem;
+
+}
 
 main p:first-child {
   color: #7158EF;
-  
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 3.2rem;
+  margin-bottom: 1.7rem;
 }
+
+a {
+  color: #090039;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#a192f6;
+  font-weight: bold;
+}
+
+ul {
+  margin-top: 7.2rem;
+}
+
+ul li {
+  font-weight: 7.0rem;
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  max-width:25.7rem;
+  display: flex;
+  gap: 3.87rem;
+}
+
+ul li span {
+  font-weight: 800;
+  font-size: 7.2rem;
+  line-height: 8.0rem;
+  /*quando a unidade é menor do que 4px, é melhor não utilizar o formato REM de medida, apra evitar alteração de layout */
+  letter-spacing: -2px; 
+  }
+
+  /* media queries */
+  @media (min-width: 700px;) {
+    main {
+      max-width: 90%;
+      display: flex;
+      gap: 10rem;
+
+    }
+  }
